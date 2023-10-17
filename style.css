@@ -29,9 +29,9 @@ h1 {
 
 .button {
     display: inline-block;
-    padding: 50px; /* 7 times bigger */
-    width: 100px; /* Make them perfectly square */
-    height: 100px; /* Make them perfectly square */
+    padding: 50px;
+    width: 100px;
+    height: 100px;
     background-color: #333;
     color: #fff;
     text-decoration: none;
