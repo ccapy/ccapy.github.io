@@ -1,11 +1,11 @@
 @font-face {
-    font-family: 'YoungSerif'; /* Provide a unique name for the font */
+    font-family: 'YourCustomFont'; /* Provide a unique name for the font */
     src: url('YoungSerif-Regular.ttf') format('truetype');
     /* You can specify other font formats as well, like woff or woff2 for better cross-browser compatibility */
 }
 
 body {
-    font-family: 'YoungSerif', sans-serif; /* Use your custom font with a fallback */
+    font-family: 'YourCustomFont', sans-serif; /* Use your custom font with a fallback */
     /* Additional styling for the body */
 }
 
