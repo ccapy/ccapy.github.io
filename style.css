@@ -28,10 +28,12 @@ h1 {
 }
 
 .button {
-    display: inline-block;
-    padding: 50px;
-    width: 100px;
-    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px; /* 7 times bigger */
+    width: 100px; /* Make them perfectly square */
+    height: 100px; /* Make them perfectly square */
     background-color: #333;
     color: #fff;
     text-decoration: none;
@@ -45,4 +47,3 @@ h1 {
     background-color: #555;
     color: #fff;
 }
- 
