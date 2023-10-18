@@ -4,6 +4,16 @@
     /* You can specify other font formats as well, like woff or woff2 for better cross-browser compatibility */
 }
 
+@media (max-width: 768px) {
+    .button {
+        padding: 30px; /* Adjust padding for larger buttons */
+        width: 150px; /* Adjust button width */
+        height: 150px; /* Adjust button height */
+        font-size: 1.5em; /* Increase text size for readability */
+    }
+}
+
+
 body {
     font-family: 'YourCustomFont', sans-serif; /* Use your custom font with a fallback */
     /* Additional styling for the body */
