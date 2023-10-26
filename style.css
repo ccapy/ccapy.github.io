@@ -26,17 +26,17 @@ h1 {
 
 .buttons {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .button {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 30px; /* Reduce padding for buttons */
+    padding: 30px;
     width: 150px;
     height: 150px;
     background-color: #333;
@@ -46,7 +46,7 @@ h1 {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.2s, color 0.2s;
-    margin: 10px; /* Add margin to separate buttons */
+    margin: 10px;
 }
 
 .button:hover {
@@ -55,10 +55,24 @@ h1 {
 }
 
 @media (max-width: 768px) {
+    .buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .button {
-        padding: 20px; /* Adjust padding for smaller screens */
-        width: 100px; /* Adjust button width for smaller screens */
-        height: 100px; /* Adjust button height for smaller screens */
-        font-size: 1.2em; /* Increase text size for readability on mobile */
+        padding: 20px;
+        width: 150px;
+        height: 150px;
+        font-size: 1.5em; /* Increase text size for mobile */
+        margin: 10px;
+    }
+
+    .buttons > .button:nth-child(2n) {
+        margin-right: 10px; /* Add margin to every other button for spacing */
+    }
+
+    .buttons > .button:nth-child(2n+1) {
+        margin-left: 10px; /* Add margin to the remaining buttons for spacing */
     }
 }
