@@ -1,22 +1,10 @@
 @font-face {
-    font-family: 'YourCustomFont'; /* Provide a unique name for the font */
+    font-family: 'YourCustomFont';
     src: url('YoungSerif-Regular.ttf') format('truetype');
-    /* You can specify other font formats as well, like woff or woff2 for better cross-browser compatibility */
 }
-
-@media (max-width: 768px) {
-    .button {
-        padding: 30px; /* Adjust padding for larger buttons */
-        width: 150px; /* Adjust button width */
-        height: 150px; /* Adjust button height */
-        font-size: 1.5em; /* Increase text size for readability */
-    }
-}
-
 
 body {
-    font-family: 'YourCustomFont', sans-serif; /* Use your custom font with a fallback */
-    /* Additional styling for the body */
+    font-family: 'YourCustomFont', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #000;
@@ -37,9 +25,9 @@ h1 {
 }
 
 .buttons {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
@@ -48,9 +36,9 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 50px; /* 7 times bigger */
-    width: 100px; /* Make them perfectly square */
-    height: 100px; /* Make them perfectly square */
+    padding: 30px; /* Reduce padding for buttons */
+    width: 150px;
+    height: 150px;
     background-color: #333;
     color: #fff;
     text-decoration: none;
@@ -58,9 +46,19 @@ h1 {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.2s, color 0.2s;
+    margin: 10px; /* Add margin to separate buttons */
 }
 
 .button:hover {
     background-color: #555;
     color: #fff;
+}
+
+@media (max-width: 768px) {
+    .button {
+        padding: 20px; /* Adjust padding for smaller screens */
+        width: 100px; /* Adjust button width for smaller screens */
+        height: 100px; /* Adjust button height for smaller screens */
+        font-size: 1.2em; /* Increase text size for readability on mobile */
+    }
 }
