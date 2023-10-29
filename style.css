@@ -10,9 +10,6 @@ body {
     background-color: #000;
     color: #fff;
     text-align: center;
-}
-
-.container {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -20,15 +17,96 @@ body {
     height: 100vh;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 h1 {
     font-size: 2em;
+}
+
+.switch-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+/* Red background when switch is in the "Local" position */
+input:checked + .slider {
+    background-color: red;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px red;
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.switch-label {
+    text-align: center;
+    margin-top: 10px; /* Add some space between the switch and the text */
+    font-weight: bold;
+    color: white;
+}
+
+/* Style for "Public" when the switch is checked */
+input:checked + .slider + .switch-label {
+    color: red; /* You can choose your desired color here */
 }
 
 .buttons {
     display: flex;
     justify-content: center;
     gap: 10px;
-    margin-top: 20px;
     flex-wrap: wrap;
 }
 
@@ -52,27 +130,4 @@ h1 {
 .button:hover {
     background-color: #555;
     color: #fff;
-}
-
-@media (max-width: 768px) {
-    .buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button {
-        padding: 20px;
-        width: 150px;
-        height: 150px;
-        font-size: 1.5em; /* Increase text size for mobile */
-        margin: 10px;
-    }
-
-    .buttons > .button:nth-child(2n) {
-        margin-right: 10px; /* Add margin to every other button for spacing */
-    }
-
-    .buttons > .button:nth-child(2n+1) {
-        margin-left: 10px; /* Add margin to the remaining buttons for spacing */
-    }
 }
