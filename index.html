@@ -7,20 +7,31 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome.</h1>
+        <div class="welcome-container">
+            <h1>Welcome.</h1>
+        </div>
+        <div class="switch-container">
+            <label class="switch">
+                <input type="checkbox" id="localSwitch">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        <div class="switch-label">
+            <span id="switchStatus">Local</span>
+        </div>
         <div class="buttons">
-            <a class="button" href="https://proxmox.florehomelab.com">Proxmox</a>
-            <a class="button" href="https://casaos.florehomelab.com">CasaOS</a>
-            <a class="button" href="https://obico.florehomelab.com">Obico</a>
-            <a class="button" href="https://hass.florehomelab.com">Home Assistant</a>
-            <a class="button" href="https://kuma.florehomelab.com">Kuma</a>
-            <a class="button" href="https://puffer.florehomelab.com">PufferPanel</a>
-            <a class="button" href="https://adguard.florehomelab.com">AdGuard</a>
-            <a class="button" href="https://portainer.florehomelab.com">Portainer</a>
-            <a class="button" href="https://guacamole.florehomelab.com">Guacamole</a>
-            <a class="button" href="https://remotely.florehomelab.com">Remotely</a>
-            <a class="button" href="https://one.dash.cloudflare.com/">Cloudflare Zero Trust</a>
+            <a class="button" data-local-link="https://10.0.0.69:8006" data-remote-link="https://proxmox.florehomelab.com">Proxmox</a>
+            <a class="button" data-local-link="http://10.0.0.59" data-remote-link="https://casaos.florehomelab.com">CasaOS</a>
+            <a class="button" data-local-link="http://10.0.0.59:3334" data-remote-link="https://obico.florehomelab.com">Obico</a>
+            <a class="button" data-local-link="http://10.0.0.49:8123" data-remote-link="https://hass.florehomelab.com">Home Assistant</a>
+            <a class="button" data-local-link="http://10.0.0.59:3001" data-remote-link="https://kuma.florehomelab.com">Kuma</a>
+            <a class="button" data-local-link="http://10.0.0.59:8080" data-remote-link="https://puffer.florehomelab.com">PufferPanel</a>
+            <a class="button" data-local-link="http://10.0.0.59:3002/" data-remote-link="https://adguard.florehomelab.com">AdGuard</a>
+            <a class="button" data-local-link="https://10.0.0.59:9443/" data-remote-link="https://portainer.florehomelab.com">Portainer</a>
+            <a class="button" data-local-link="http://10.0.0.59:8194/#/" data-remote-link="https://guacamole.florehomelab.com">Guacamole</a>
+            <a class="button" data-remote-link="https://one.dash.cloudflare.com">Cloudflare Zero Trust</a>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
